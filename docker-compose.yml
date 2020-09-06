@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  rest_api:
+    container_name: rest_api
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    volumes:
+    - ./back:/usr/src/app/rest_api
+    tty: true
+    ports:
+    - 8000:8000
+  front:
+    container_name: front
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    volumes:
+    - ./front:/usr/src/app/front
+    tty: true
+    ports:
+    - 3000:3000
+    depends_on:
+      - rest_api

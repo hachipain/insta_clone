@@ -12,7 +12,6 @@ import {
 } from "../post/postSlice";
 import { File } from "../types";
 import TextField from "@material-ui/core/TextField";
-import { editNickName } from "../auth/authSlice";
 import { IconButton } from "@material-ui/core";
 import { MdAddAPhoto } from "react-icons/all";
 import Button from "@material-ui/core/Button";

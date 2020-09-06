@@ -169,7 +169,7 @@ const Auth: React.FC = () => {
 
             if (fetchAsyncLogin.fulfilled.match(result)) {
               await dispatch(fetchAsyncGetProfs());
-              await dispatch(fetchAsyncGetPosts);
+              await dispatch(fetchAsyncGetPosts());
               await dispatch(fetchAsyncGetComments());
               await dispatch(fetchAsyncGetMyProf());
             }

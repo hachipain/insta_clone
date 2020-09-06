@@ -14,3 +14,24 @@
 `material-ui`  
 `formik`
 `yup`
+
+# docker  
+## コンテナ起動  
+```bash
+docker-compose up -d
+```
+
+## rest_api起動
+```bash
+docker container exec -it rest_api python manage.py runserver 0:8000
+```
+
+## webサーバ起動
+```bash
+docker container exec -it front yarn start
+```
+
+## コンテナ終了
+```bash
+docker-compose down
+```
